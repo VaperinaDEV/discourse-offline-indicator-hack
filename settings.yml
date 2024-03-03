@@ -1,0 +1,5 @@
+svg_icons: 
+  default: "wifi|slash"
+  type: "list"
+  list_type: "compact"
+  description: "List of FontAwesome 5 icons used in this theme component"
