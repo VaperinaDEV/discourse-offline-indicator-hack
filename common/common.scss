@@ -1,31 +1,25 @@
+@import "svg-icon-mixins";
+
 // Offline Indicator
 
 .offline-indicator {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25em;
   top: calc(var(--header-offset) + 0.5em);
   background: var(--secondary);
   border: 1px solid var(--tertiary);
   border-radius: var(--d-border-radius);
-
-  &--icon {
-    display: flex;
-    position: relative;
-    .d-icon-wifi {
-      opacity: 0.7;
-    }
-    .d-icon-slash {
-      transform: rotate(10deg);
-      position: absolute;
-      bottom: 1px;
-    }
-  }
   
   .mobile-view & {
     max-width: calc(100% - 2em - 20px);
     width: max-content;
+  }
+
+  > span {
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: text-top;
+      margin-right: 0.25em;
+      @include svg-icon(metarial, m-wifi-off, currentColor, 1em, 1em);
+    }
   }
 }

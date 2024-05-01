@@ -1,0 +1,15 @@
+@import "svg-icons/material";
+
+$svg-prefix: 'data:image/svg+xml;utf-8,';
+
+@mixin svg-icon($icon-set, $icon-name, $icon-color, $width, $height) {
+  
+  $svg-url: $svg-prefix + map-get($material, $icon-name);
+  -webkit-mask-image: url($svg-url);
+  
+  width: $width;
+  height: $height;
+  background: $icon-color;
+  -webkit-mask-size: $width $height;
+  -webkit-mask-repeat: no-repeat;
+}
