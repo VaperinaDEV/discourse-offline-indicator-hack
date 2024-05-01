@@ -9,7 +9,7 @@
   border-radius: var(--d-border-radius);
   
   .mobile-view & {
-    max-width: 100%;
+    max-width: calc(100% - 2em - 20px);
     width: max-content;
   }
 
